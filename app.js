@@ -5,7 +5,6 @@ const cors = require('cors');
 
 const cardRoutes = require('./routes/cardRoutes');
 const errorHandler = require('./middlewares/errorHandler');
-
 dotenv.config();
 
 const app = express();
@@ -18,4 +17,4 @@ app.use(express.static('public'));
 app.use('/cards', cardRoutes)
 app.use(errorHandler);
 
-app.listen(port, ()=>console.log(`server running on port ${port}`))
+app.listen(port, ()=>console.log(`server running on port ${port}`));
